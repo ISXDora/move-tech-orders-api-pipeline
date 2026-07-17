@@ -33,7 +33,7 @@ jobs:
 
       - name: Build e push da imagem
         run: |
-          docker build -t ${{ secrets.MGC_REGISTRY_NAME }}/orders-api:${{ github.sha }} .
+          docker build -t ${{ secrets.MGC_REGISTRY_NAME }}/orders-api:${{ github.sha }} ./../Dockerfile
           docker push ${{ secrets.MGC_REGISTRY_NAME }}/orders-api:${{ github.sha }}
 
 
